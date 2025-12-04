@@ -1,39 +1,25 @@
 import { useState } from 'react'
+import Input from './components/Input';
+import Button from './components/Button';
+import Text from './components/Text';
 import './App.css'
 
-
-function InputComp({placeholder, val, handleChanges}){
-    return (
-      <input type="text" placeholder={placeholder} value={val}
-        onChange={handleChanges}  
-      />
-    )
-}
-
 function App() {
-  const [text, settext] = useState("");
-  const [inputvalue, setinputvalue] = useState("");
+  const [text, setText] = useState("");
+  const [inputValue, setInputValue] = useState("");
 
-  function ButtonComp({label, val}){
-  const handleclick =() =>{
-    settext(val);
-    setinputvalue("");
+  const handleClick =() =>{
+    setText(inputValue);
+    setInputValue("");
   }
-    return(
-      <button onClick={handleclick}>{label}</button>
-    )
-
-}
-
 
   return (
     <>
-    <h1>Hello World!</h1>
-    <h1>Welcome {text} </h1>
-    <InputComp placeholder="enter name" 
-      val={inputvalue}
-      handleChanges={(e)=>setinputvalue(e.target.value)}/>
-    <ButtonComp label="submit" val={inputvalue} />
+    <Text text={text}/>
+    <Input placeholder="enter name" 
+      val={inputValue}
+      handleChange={(e)=>setInputValue(e.target.value)}/>
+    <Button label="submit" val={inputValue} handleClick={handleClick} />
     </>
   )
 
