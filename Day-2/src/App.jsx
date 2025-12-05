@@ -45,7 +45,6 @@ function App() {
           <InputFile
             label="Upload File"
             placeHolder="upload file"
-            value={file}
             handleChange={(e) => setFile(e.target.value)}
           />
 
