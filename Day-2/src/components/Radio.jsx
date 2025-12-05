@@ -2,9 +2,9 @@ function Radio({ name, option = [], handleChange }) {
   return (
     <>
       <div>
-        <div className="p-2 text-white font-bold text-xl">{name}</div>
+        <div className="p-2 font-bold text-xl">{name}</div>
         {option.map((opt) => (
-          <label className=" p-2 text-white font-semibold">
+          <label className=" p-2 flex font-semibold">
             <input
               type="radio"
               name={name}

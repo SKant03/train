@@ -7,6 +7,7 @@ import InputFile from "./components/InputFile";
 import InputDate from "./components/InputDate";
 import InputRange from "./components/InputRange";
 import Button from "./components/Button";
+import ThemeButton from "./components/Theme";
 
 function App() {
   const [text, setText] = useState("");
@@ -29,9 +30,11 @@ function App() {
 
   return (
     <>
-      <div className="flex justify-center bg-cyan-700 h-screen w-screen">
-        <div className=" mt-10 p-2 border h-min rounded-xl bg-cyan-800 shadow-lg">
-          <h1 className="text-5xl font-bold text-center text-white"> Day-2</h1>
+      <div className="flex justify-center h-screen w-screen ">
+        <div className=" mt-10 p-2 rounded-xl ">
+          <div>
+            <ThemeButton />
+          </div>
           <Input
             label="Enter name"
             placeHolder="enter text"
